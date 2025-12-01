@@ -1,6 +1,6 @@
 // src/Layout.tsx
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {
   Menu,
   X,
@@ -17,9 +17,6 @@ interface LayoutProps {
 
 export const Layout: React.FC<LayoutProps> = ({ children }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const location = useLocation();
-
-  const isBookingPage = location.pathname === '/reservar';
 
   const handleNavClick = () => {
     setIsMobileMenuOpen(false);
@@ -50,49 +47,45 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
             {/* Desktop Nav */}
             <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-sm font-medium">
 
-              {!isBookingPage && (
-                <>
-                  <Link
-                    to="/trasteros-particulares"
-                    className="text-slate-600 hover:text-sky-600 transition"
-                  >
-                    Trasteros Particulares
-                  </Link>
-                  <Link
-                    to="/empresas-autonomos"
-                    className="text-slate-600 hover:text-sky-600 transition"
-                  >
-                    Empresas y Autónomos
-                  </Link>
-                  <Link
-                    to="/tamanos"
-                    className="text-slate-600 hover:text-sky-600 transition"
-                  >
-                    Tamaños
-                  </Link>
-                  <Link
-                    to="/donde-estamos"
-                    className="text-slate-600 hover:text-sky-600 transition"
-                  >
-                    Dónde estamos
-                  </Link>
-                  <Link
-                    to="/contacto"
-                    className="text-slate-600 hover:text-sky-600 transition"
-                  >
-                    Contacto
-                  </Link>
-                  <Link
-                    to="/aviso-legal"
-                    className="text-slate-600 hover:text-sky-600 transition"
-                  >
-                    Legal
-                  </Link>
-                </>
-              )}
+              {/* ✅ MENÚ SIEMPRE VISIBLE, TAMBIÉN EN /reservar */}
+              <Link
+                to="/trasteros-particulares"
+                className="text-slate-600 hover:text-sky-600 transition"
+              >
+                Trasteros Particulares
+              </Link>
+              <Link
+                to="/empresas-autonomos"
+                className="text-slate-600 hover:text-sky-600 transition"
+              >
+                Empresas y Autónomos
+              </Link>
+              <Link
+                to="/tamanos"
+                className="text-slate-600 hover:text-sky-600 transition"
+              >
+                Tamaños
+              </Link>
+              <Link
+                to="/donde-estamos"
+                className="text-slate-600 hover:text-sky-600 transition"
+              >
+                Dónde estamos
+              </Link>
+              <Link
+                to="/contacto"
+                className="text-slate-600 hover:text-sky-600 transition"
+              >
+                Contacto
+              </Link>
+              <Link
+                to="/aviso-legal"
+                className="text-slate-600 hover:text-sky-600 transition"
+              >
+                Legal
+              </Link>
 
               <div className="flex items-center gap-3">
-
                 {/* Teléfono en el header */}
                 <a
                   href="tel:+34690288707"
@@ -128,61 +121,58 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
           <div className="md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg">
             <div className="px-4 py-4 space-y-4 flex flex-col text-base">
 
-              {!isBookingPage && (
-                <>
-                  <Link
-                    to="/trasteros-particulares"
-                    onClick={handleNavClick}
-                    className="block font-medium text-slate-700"
-                  >
-                    Trasteros Particulares
-                  </Link>
-                  <Link
-                    to="/empresas-autonomos"
-                    onClick={handleNavClick}
-                    className="block font-medium text-slate-700"
-                  >
-                    Empresas y Autónomos
-                  </Link>
-                  <Link
-                    to="/tamanos"
-                    onClick={handleNavClick}
-                    className="block font-medium text-slate-700"
-                  >
-                    Tamaños
-                  </Link>
-                  <Link
-                    to="/donde-estamos"
-                    onClick={handleNavClick}
-                    className="block font-medium text-slate-700"
-                  >
-                    Dónde estamos
-                  </Link>
-                  <Link
-                    to="/contacto"
-                    onClick={handleNavClick}
-                    className="block font-medium text-slate-700"
-                  >
-                    Contacto
-                  </Link>
-                  <Link
-                    to="/aviso-legal"
-                    onClick={handleNavClick}
-                    className="block font-medium text-slate-700"
-                  >
-                    Legal
-                  </Link>
+              {/* ✅ MENÚ MÓVIL TAMBIÉN SIEMPRE VISIBLE */}
+              <Link
+                to="/trasteros-particulares"
+                onClick={handleNavClick}
+                className="block font-medium text-slate-700"
+              >
+                Trasteros Particulares
+              </Link>
+              <Link
+                to="/empresas-autonomos"
+                onClick={handleNavClick}
+                className="block font-medium text-slate-700"
+              >
+                Empresas y Autónomos
+              </Link>
+              <Link
+                to="/tamanos"
+                onClick={handleNavClick}
+                className="block font-medium text-slate-700"
+              >
+                Tamaños
+              </Link>
+              <Link
+                to="/donde-estamos"
+                onClick={handleNavClick}
+                className="block font-medium text-slate-700"
+              >
+                Dónde estamos
+              </Link>
+              <Link
+                to="/contacto"
+                onClick={handleNavClick}
+                className="block font-medium text-slate-700"
+              >
+                Contacto
+              </Link>
+              <Link
+                to="/aviso-legal"
+                onClick={handleNavClick}
+                className="block font-medium text-slate-700"
+              >
+                Legal
+              </Link>
 
-                  {/* Teléfono en menú móvil */}
-                  <a
-                    href="tel:+34690288707"
-                    className="block font-semibold text-sky-700"
-                  >
-                    <Phone className="inline-block mr-2" size={16} />
-                    690 288 707
-                  </a>
-                </>
-              )}
+              {/* Teléfono en menú móvil */}
+              <a
+                href="tel:+34690288707"
+                className="block font-semibold text-sky-700"
+              >
+                <Phone className="inline-block mr-2" size={16} />
+                690 288 707
+              </a>
 
               <Link
                 to="/reservar"

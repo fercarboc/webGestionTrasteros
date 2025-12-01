@@ -4,18 +4,52 @@ import { MapPin, Car, Bus, Info } from 'lucide-react';
 export const DondeEstamosPage: React.FC = () => {
   return (
     <div className="bg-white">
-      {/* HERO */}
-      <section className="bg-slate-900 text-white py-16 lg:py-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl md:text-5xl font-extrabold mb-4">
-            ¿Dónde está CantabriaStorage?
-          </h1>
-          <p className="text-lg text-slate-200 max-w-3xl mx-auto">
-            Estamos en el <strong>Polígono Industrial Tanos-Viérnoles</strong>,
-            en Torrelavega (Cantabria), con acceso rápido desde la autovía A-67.
-          </p>
+      {/* HERO ESTILO TAMAÑOS PERO CON CARD DERECHA */}
+     // HERO ESTILO TAMAÑOS PERO CON CARD DERECHA DE ACCESO
+<section className="bg-slate-900 text-white py-16 lg:py-20">
+  <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center">
+    
+    {/* Texto izquierda */}
+    <div>
+      <h1 className="text-3xl md:text-5xl font-extrabold mb-4">
+        ¿Dónde está CantabriaStorage?
+      </h1>
+      <p className="text-lg text-slate-200">
+        Estamos en el <strong>Polígono Industrial Tanos-Viérnoles</strong>, 
+        en Torrelavega (Cantabria), con acceso directo desde la autovía A-67.
+      </p>
+    </div>
+
+    {/* Card derecha con iconos */}
+    <div className="bg-gradient-to-br from-slate-800 to-slate-700 rounded-3xl p-6 shadow-2xl border border-slate-700">
+
+      <div className="text-sm text-slate-200 font-semibold mb-3">
+        Accesos disponibles
+      </div>
+
+      <div className="flex flex-col gap-3 text-slate-200 text-sm">
+
+        <div className="flex items-center gap-2">
+          <Car className="text-brand-400" size={20} />
+          <span>Acceso en coche o furgoneta</span>
         </div>
-      </section>
+
+        <div className="flex items-center gap-2">
+          <Bus className="text-brand-400" size={20} />
+          <span>Conexión mediante transporte público</span>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <MapPin className="text-brand-400" size={20} />
+          <span>A pie desde Tanos / Barreda / Torrelavega</span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* MAPA + INFO */}
       <section className="py-16 bg-slate-50">

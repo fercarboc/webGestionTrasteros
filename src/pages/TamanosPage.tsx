@@ -89,7 +89,7 @@ export const TamanosPage: React.FC = () => {
       </section>
 
       {/* TARJETAS DE TAMAÑOS */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-10 bg-slate-50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 mb-2 text-brand-600 text-sm font-semibold">
             <Boxes size={18} />

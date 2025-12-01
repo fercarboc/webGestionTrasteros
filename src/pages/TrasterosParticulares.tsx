@@ -33,7 +33,7 @@ export const TrasterosParticulares: React.FC = () => {
 
 
       {/* IDEAL PARA… CON IMÁGENES */}
-      <section className="py-16 bg-slate-50">
+      <section className="py-05 bg-slate-50">
         <div className="max-w-6xl mx-auto px-4">
 
           <h2 className="text-3xl font-bold text-slate-900 mb-10 text-center">
