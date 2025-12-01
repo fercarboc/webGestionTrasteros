@@ -10,7 +10,7 @@ export const EmpresasAutonomos: React.FC = () => {
  {/* HERO */}
 <section
   className="relative w-full h-[340px] md:h-[420px] bg-center bg-cover bg-no-repeat flex items-center justify-center"
-  style={{ backgroundImage: `url('src/public/images/empresas.webp')` }}
+  style={{ backgroundImage: `url('/empresas.webp')` }}
 >
   {/* capa oscura */}
   <div className="absolute inset-0 bg-black/55"></div>
@@ -47,7 +47,7 @@ export const EmpresasAutonomos: React.FC = () => {
             {/* Stock y mercancía */}
             <div className="bg-white border rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
               <img
-                src="src/public/images/stock.jpg"
+                src="/stock.jpg"
                 alt="Stock y mercancía"
                 className="w-full h-48 object-cover"
               />
@@ -61,7 +61,7 @@ export const EmpresasAutonomos: React.FC = () => {
             {/* Inventario y logística */}
             <div className="bg-white border rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
               <img
-                src="src/public/images/inventario.webp"
+                src="/inventario.webp"
                 alt="Inventario y logística"
                 className="w-full h-48 object-cover"
               />
@@ -75,7 +75,7 @@ export const EmpresasAutonomos: React.FC = () => {
             {/* Herramientas y material de obra */}
             <div className="bg-white border rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
               <img
-                src="src/public/images/materialobras.webp"
+                src="/materialobras.webp"
                 alt="Material de obra"
                 className="w-full h-48 object-cover"
               />
@@ -89,7 +89,7 @@ export const EmpresasAutonomos: React.FC = () => {
             {/* Archivo documentación */}
             <div className="bg-white border rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
               <img
-                src="src/public/images/archivodocumentacion.jpg"
+                src="/archivodocumentacion.jpg"
                 alt="Archivo documentación"
                 className="w-full h-48 object-cover"
               />
@@ -103,7 +103,7 @@ export const EmpresasAutonomos: React.FC = () => {
             {/* Almacén auxiliar */}
             <div className="bg-white border rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
               <img
-                src="src/public/images/almacenauxiliar.avif"
+                src="/almacenauxiliar.avif"
                 alt="Almacén auxiliar"
                 className="w-full h-48 object-cover"
               />
@@ -117,7 +117,7 @@ export const EmpresasAutonomos: React.FC = () => {
             {/* Reparto y logística local */}
             <div className="bg-white border rounded-xl shadow-sm overflow-hidden hover:shadow-lg transition">
               <img
-                src="src/public/images/suministro.png"
+                src="/suministro.png"
                 alt="Reparto local"
                 className="w-full h-48 object-cover"
               />

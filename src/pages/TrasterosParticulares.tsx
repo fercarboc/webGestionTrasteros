@@ -10,7 +10,7 @@ export const TrasterosParticulares: React.FC = () => {
      
 <section 
   className="relative w-full h-[340px] md:h-[420px] bg-center bg-cover bg-no-repeat flex items-center justify-center"
-  style={{ backgroundImage: `url('src/public/images/clientes.webp')` }}
+  style={{ backgroundImage: `url('/clientes.webp')` }}
 >
   {/* Capa oscura para contraste */}
   <div className="absolute inset-0 bg-black/50"></div>
@@ -43,12 +43,12 @@ export const TrasterosParticulares: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
             {[
-              { img: "src/public/images/muebles.jpg", text: "Muebles y enseres" },
-              { img: "src/public/images/electrodomesticos.jpg", text: "Electrodomésticos" },
-              { img: "src/public/images/navidad.jpg", text: "Decoración del hogar y temporada" },
-              { img: "src/public/images/recuerdos.png", text: "Recuerdos personales y álbumes" },
-              { img: "src/public/images/mudanzas.avif", text: "Contenido temporal de mudanzas" },
-              { img: "src/public/images/libros.png", text: "Libros, material de estudio y documentos" },
+              { img: "/muebles.jpg", text: "Muebles y enseres" },
+              { img: "/electrodomesticos.jpg", text: "Electrodomésticos" },
+              { img: "/navidad.jpg", text: "Decoración del hogar y temporada" },
+              { img: "/recuerdos.png", text: "Recuerdos personales y álbumes" },
+              { img: "/mudanzas.avif", text: "Contenido temporal de mudanzas" },
+              { img: "/libros.png", text: "Libros, material de estudio y documentos" },
 
             ].map((item, idx) => (
               <div key={idx} className="bg-white border rounded-xl shadow-sm overflow-hidden">
